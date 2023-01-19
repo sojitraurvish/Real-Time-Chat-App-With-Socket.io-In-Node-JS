@@ -1,6 +1,7 @@
 // Note
 // emit -> is used to call the event or register event and through the data 
 // on   -> is used to access that data and .on method is listen particular event
+
 // io   -> is used to give changes to every client
 // socket -> is used to give changes to only one particular connected client 
 const path=require("path");
@@ -20,7 +21,7 @@ app.use(express.static(publicDirectoryPath));
 let count=0;
 
 io.on("connection",(socket)=>{// this function will run when every new client get connected to server and on function is used to listen and react on same event
-    console.log("New Websocket Connection");
+    console.log("New Websocket Connectionx");
     
     //Now when user get connected i want to send new event to client and emit function is used to register new event
     socket.emit("countUpdated",count);
